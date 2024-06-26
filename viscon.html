@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Course Hub</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network@9.1.0/dist/vis-network.min.js"></script>
+    <link rel="stylesheet" href="css/viscon.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="dropdown">
+            <div class="sidebar-title">
+                <h3>Explore Course Information</h3>
+            </div>
+            <label for="topic-name" class="sidebar-label" title="Select one of the courses">Course:</label> 
+            <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+            <!-- <ul class="dashed" id="topic-list"></ul> -->
+        </div>
+        <div class="dropdown" style=" overflow-y: auto;"> 
+            <ul class="dashed" id="topic-list"></ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="upper">
+            <div id="sub-upper" class="sub-upper" style="outline: 2px;" >
+                <div class="initial-text"><h3>Select a course</h3></div>
+                <!-- See if there is anu issue in below one, we removed the text -->
+                <div id="mynetwork" class="chart mynetwork"></div> 
+            </div>
+            <div id="sub-lower" class="sub-lower">
+                <div class="initial-text"><h3>Click on a node to get more information</h3></div>
+                <div id="sub-lower-content"></div>
+            </div>
+            
+            
+        </div>
+        <div id="table-data" class="lower">
+            <div class="initial-text"><h3>Select a course</h3></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/viscon.js"></script>
+</body>
+</html>
+

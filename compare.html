@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Course Hub</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network@9.1.0/dist/vis-network.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <link rel="stylesheet" href="css/compare.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="dropdown">
+            <div class="sidebar-title">
+                <h3>Course Compare</h3>
+            </div>
+            <!-- <div class="comparison-options"> -->
+                <label for="topic-name" class="sidebar-label" title="Select first course for comparison">Select First Course:</label> 
+                <select class="topic-name" name="topic-name" id="topic-name" onchange="populateFirstCourse(this)"></select>
+                <label for="topic-name2" class="sidebar-label" title="Select second course for comparison">Select Second Course:</label>
+                <select class="topic-name" name="topic-name" id="topic-name2" onchange="populateSecondCourse(this)"></select>
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="content">
+        <div class="upper">
+            <div id="sub-upper" class="sub-upper">
+                <div class="initial-text"><h3>Select first course</h3></div>
+                <div id="sub-upper-graph"></div>
+            </div>
+            <div id="sub-lower" class="sub-lower">
+                <div class="initial-text"><h3>Select second course</h3></div>
+                <div id="sub-upper-graph"></div>
+            </div>
+        </div>
+        <div class="lower">
+            <div id="lower-left" class="lower-left">
+                <div class="initial-text"><h3>Click on a node to get more information</h3></div>
+            </div>
+            <div id="lower-right" class="lower-right">
+                <div class="initial-text"><h3>Click on a node to get more information</h3></div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<script src="js/compare.js"></script>
+</body>
+</html>
+

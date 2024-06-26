@@ -1,0 +1,396 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+
+.sidebar {
+    scrollbar-gutter: stable;
+    box-shadow: 1px 1px 5px #888888;
+    background-color: transparent;
+    width: 20%; /* 20% width */
+    padding: 10px;
+    box-sizing: border-box;
+    /* overflow-y: auto;  */
+    display: flex; /* Nested flexbox */
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    /* border-radius: 10px; */
+
+}
+
+ /* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888888; 
+    border-radius: 8px;
+}
+
+.sidebar-title{
+    font-family: 'Playfair Display', serif;
+    color:  #333333;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 2px;
+    box-shadow: inset 0px -5px 5px -5px #888888;
+}
+
+.sidebar-title h3{
+    margin-top: 15px;
+}
+
+.sidebar-label{
+    font-weight: bold;
+}
+.dropdown {
+    margin-bottom: 20px;
+    scrollbar-gutter: stable;
+}
+
+.dropdown::-webkit-scrollbar {
+    width: 7px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    /* border-radius: 10px; */
+
+}
+
+ /* Handle */
+.dropdown::-webkit-scrollbar-thumb {
+    background: #888888; 
+    border-radius: 8px;
+}
+.dropdown label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444444;
+}
+.dropdown select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.sidebar-bottom {
+    margin-top: auto; /* Push to bottom */
+}
+
+
+.content {
+    flex: 2;
+    padding: 20px;
+    display: flex; /* Nested flexbox */
+    flex-direction: column;
+    height: 87vh;
+}
+
+.upper {
+    padding: 0; 
+    flex: 0.7; /* 60% of container height */
+    display: flex; /* Nested flexbox */
+    max-height: 75%;
+    min-height: 75%;
+    max-width: 100%;
+}
+
+.sub-upper {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    flex: 0.6;
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: hidden; /* Enable scrolling if content overflows */
+    position: relative;
+}
+
+.sub-lower {
+    scrollbar-gutter: stable;
+    margin-bottom: 10px;
+    padding: 20px;
+    flex: 0.4; 
+    border: 1px solid black;
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: auto; 
+    position: relative;
+    z-index: 1;
+}
+
+.sub-lower::-webkit-scrollbar {
+    width: 7px;
+}
+
+.sub-lower::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+
+}
+
+ /* Handle */
+.sub-lower::-webkit-scrollbar-thumb {
+    background: #888888; 
+    border-radius: 8px;
+}
+
+.lower {
+    padding: 20px;
+    flex: 0.3; /* 40% of container height */
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: auto; /* Enable scrolling if content overflows */
+    max-height: 30%;
+    position: relative;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+th{
+    background-color: #e7eef6;
+}
+
+.dashed {
+    padding-left: 8px;
+    margin: 0;
+    margin-top: 10px;
+}
+    .dashed {
+    list-style-type: none;
+}
+    .dashed > li {
+    text-indent: -15px;
+    margin-bottom: 8px;
+}
+    .dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+    margin-right: 10px;
+}
+
+    #topic-list li {
+    color:  #007bff;
+    transition: color 0.3s;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    border-bottom: 1px solid #666666;
+    padding-bottom: 5px;
+    margin-right: 10px;
+}
+
+
+#topic-list li:hover {
+    color: darkblue;
+}
+
+/* Add styling as needed */
+.node rect {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font: 12px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+svg{
+    cursor: pointer;
+}
+
+.zoom-buttons {
+    
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+}
+
+.zoom-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.zoom-buttons button i {
+    font-size: 18px;
+}
+
+.chart-container {
+    margin-bottom: 10px;
+}
+.chart {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+    fill: lightskyblue;
+}
+
+.axis-x text {
+    font-size: 12px;
+}
+
+.axis-y text {
+    font-size: 12px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 12px;
+}
+
+.axis-x path {
+    display: none;
+}
+
+/* Concept-info css */
+
+#concept-list{
+    list-style-type: circle;
+}
+
+#concept-list li:before{
+    content: '';
+} 
+#concept-list li {
+    color: #007bff;
+    transition: color 0.3s;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    padding-left: 10px;
+}
+
+#concept-list li span {
+    text-decoration: underline; /* Apply underline only to the text */
+}
+
+#concept-list li:hover {
+    color: darkblue;
+}
+
+#concept-list li:hover {
+    color: darkblue;
+}
+
+#concept-graph{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(250, 250, 250, 0.8);
+}
+
+#top-btn{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+}
+
+#concept-graph-figure{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+}
+
+
+.legend-image {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    width: 125px;
+    height: 110px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+
+.initial-text{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    color: #888888;
+    opacity: 0.6;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+}
+
+.sub-lower-content > .sidebar-title{
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 8px;
+}
+
+p{
+    text-align: justify;
+}
+
+#concept-graph-close-btn{
+    margin: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}

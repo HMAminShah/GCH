@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Course Hub</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network@9.1.0/dist/vis-network.min.js"></script>
+    <link rel="stylesheet" href="css/test2.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="sidebar">
+        <div class="dropdown">
+            <div class="sidebar-title">
+                <h3>Explore Courses by concepts & Specializations</h3>
+            </div>
+            <label class="sidebar-label" title="Select the option to filter by">Select By:</label>
+            <label for="specialization"><input type="radio" id="specialization" name="property" value="Specialization" checked> Specializations</label>
+            <label for="topics"><input type="radio" id="topics" name="property" value="Topics"> Concepts</label>
+            <label class="sidebar-label" id="topic-name" for="topic-name">Attribute:</label> 
+            <input type="text" id="searchInput" placeholder="Search..." autocomplete="off" style="margin-bottom: 0;">
+        </div>
+        <div class="dropdown" style=" overflow-y: auto;">
+            
+            <ul class="dashed" id="topic-list"></ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="upper">
+            <div class="sub-upper" style="outline: 2px;">
+                <div class="initial-text"><h3>Select a concept or specialization</h3></div>
+                <img src="Assets/legend_org.png" id="legend-image" class="legend-image">
+                <div id="org-chart" class="chart org-chart"></div>
+            </div>  
+        </div>
+        <div id="table-data" class="lower">
+            <div class="initial-text"><h3>Select a concept or specialization</h3></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/test2.js"></script>
+</body>
+</html>
